@@ -2,8 +2,10 @@
 
 namespace App\Models;
 
+use App\Casts\PublishedStatus;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Collection;
 use Spatie\Feed\Feedable;
@@ -25,8 +27,28 @@ class Article extends Model implements Feedable
     ];
 
     protected $casts = [
-        'published_at' => 'immutable_datetime'
+        'published_at' => 'immutable_datetime',
+        'status' => PublishedStatus::class
     ];
+
+    protected $with = [
+        'series'
+    ];
+
+    public function series(): BelongsTo
+    {
+        return $this->belongsTo(Serie::class, 'serie_id');
+    }
+
+    public function isPartOfSerie(): bool
+    {
+        return (bool) $this->series?->count();
+    }
+
+    public function getSerieSiblings(): Collection|null
+    {
+        return $this->isPartOfSerie() ? $this->series->articles()->get() : null;
+    }
 
     public function getAllPublished(): Collection
     {

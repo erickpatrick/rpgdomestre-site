@@ -12,6 +12,7 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Str;
 
@@ -28,7 +29,7 @@ class ArticleResource extends Resource
             Section::make('Main data')
                 ->schema([
                     Forms\Components\TextInput::make('title')
-                        ->reactive()
+                        ->live()
                         ->afterStateUpdated(function (Set $set, ?string $state) {
                             $set('slug', Str::slug($state));
                         })
@@ -55,7 +56,7 @@ class ArticleResource extends Resource
                 ])->columnSpan(['sm' => 3, 'md' => 2, 'xl' => 2, '2xl' => 2]),
 
             Section::make('Metadata')
-                ->collapsed()
+                ->collapsible()
                 ->schema([
                     Forms\Components\DateTimePicker::make('published_at'),
                     Forms\Components\TextInput::make('slug')
@@ -72,17 +73,17 @@ class ArticleResource extends Resource
                         ->required()
                         ->minLength(120)
                         ->maxLength(180),
+                    Forms\Components\Select::make('serie_id')
+                        ->relationship(name: 'series', titleAttribute: 'name')
+                        ->searchable(['name'])
+                        ->preload(),
                     Forms\Components\TagsInput::make('keywords')
                         ->separator(',')
                         ->nestedRecursiveRules([
                             'min:3',
                             'max:50',
                         ]),
-                    Forms\Components\Radio::make('status')
-                        ->options([
-                            'draft' => 'Draft',
-                            'published' => 'Published',
-                        ])->inline()->default('draft'),
+                    Forms\Components\Toggle::make('status'),
                 ])->columnSpan(['sm' => 3, 'md' => 1, 'xl' => 1, '2xl' => 1]),
         ])
         ->columns(['md' => 3, 'xl' => 3]);
@@ -96,12 +97,20 @@ class ArticleResource extends Resource
                     ->sortable(),
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
-                Tables\Columns\SelectColumn::make('status')
-                    ->options([
-                        'draft' => 'Draft',
-                        'published' => 'Published',
-                    ]),
+                Tables\Columns\TextColumn::make('status')
+                ->state(function (Model $record): string {
+                    return match($record->status) {
+                        false => 'draft',
+                        true => 'published'
+                    };
+                })
+                ->badge()
+                ->color(fn (string $state): string => match ($state) {
+                    'draft' => 'orange',
+                    'published' => 'success',
+                }),
                 Tables\Columns\TextColumn::make('published_at')
+                    ->since()
                     ->searchable(),
             ])
             ->defaultSort('id', 'desc')
