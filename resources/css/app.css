@@ -1,3 +1,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    .fi-fo-field-wrp-label span {
+        @apply mt-2 text-sm font-medium leading-6 text-gray-900 dark:text-gray-900 !important;
+    }
+    .fi-input-wrapper,
+    .fi-fo-textarea {
+        @apply dark:ring-gray-300 dark:focus-within:ring-blue-600 !important;
+    }
+
+    .fi-input,
+    .fi-fo-textarea {
+        @apply dark:text-gray-900 !important;
+    }
+
+    .fi-fo-field-wrp-error-message {
+        @apply inline-block py-2 text-red-800 !important;
+    }
+
+    .prose-lg a {
+        @apply text-blue-600 decoration-wavy decoration-2 underline-offset-4 hover:underline;
+    }
+
+    .prose-lg table {
+        @apply min-w-full divide-y divide-gray-300;
+    }
+
+    .prose-lg th {
+        @apply py-3.5 pl-4 pr-3 text-left font-semibold text-gray-900 sm:pl-0;
+    }
+
+    .prose-lg tbody {
+        @apply divide-y divide-gray-200;
+    }
+
+    .prose-lg td {
+        @apply py-4 pl-4 pr-3 text-gray-900 sm:pl-0;
+    }
+
+    .prose-lg h3,
+    .prose-lg h4 {
+        @apply font-semibold;
+    }
+
+    .prose-lg h5 {
+        @apply italic;
+    }
+
+    .prose-lg li {
+        @apply list-disc;
+    }
+}
