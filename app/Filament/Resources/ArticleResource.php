@@ -33,7 +33,7 @@ class ArticleResource extends Resource
                             $set('slug', Str::slug($state));
                         })
                         ->required()
-                        ->minLength(50)
+                        ->minLength(20)
                         ->maxLength(65)
                         ->columnSpanFull(),
                     Forms\Components\MarkdownEditor::make('content')
@@ -82,7 +82,7 @@ class ArticleResource extends Resource
                         ->options([
                             'draft' => 'Draft',
                             'published' => 'Published',
-                        ])->inline(),
+                        ])->inline()->default('draft'),
                 ])->columnSpan(['sm' => 3, 'md' => 1, 'xl' => 1, '2xl' => 1]),
         ])
         ->columns(['md' => 3, 'xl' => 3]);
