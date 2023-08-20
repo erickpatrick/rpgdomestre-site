@@ -101,6 +101,7 @@ class PagesResource extends Resource
                         'published' => 'Published',
                     ]),
             ])
+            ->defaultSort('id', 'desc')
             ->filters([
                 Tables\Filters\TrashedFilter::make(),
             ])
