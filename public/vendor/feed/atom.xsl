@@ -70,8 +70,8 @@
                             </div>
 
                             <div class="published-info">
-                                Published on
-                                <xsl:value-of select="substring(atom:updated, 0, 11)" /> by <xsl:value-of select="atom:author/atom:name"/>
+                                Publicado em
+                                <xsl:value-of select="substring(atom:updated, 0, 11)" />, por <xsl:value-of select="atom:author/atom:name"/>
                             </div>
                         </div>
                     </xsl:for-each>
