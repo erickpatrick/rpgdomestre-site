@@ -6,9 +6,9 @@
     .fi-fo-field-wrp-label span {
         @apply mt-2 text-sm font-medium leading-6 text-gray-900 dark:text-gray-900 !important;
     }
-    .fi-input-wrapper,
+    .fi-input-wrp,
     .fi-fo-textarea {
-        @apply dark:ring-gray-300 dark:focus-within:ring-blue-600 !important;
+        @apply dark:ring-gray-300 dark:focus-within:ring-yellow-600 !important;
     }
 
     .fi-input,
@@ -21,7 +21,7 @@
     }
 
     .prose-lg a {
-        @apply text-blue-600 decoration-wavy decoration-2 underline-offset-4 hover:underline;
+        @apply underline underline-offset-4 hover:decoration-yellow-400 hover:decoration-4 hover:underline;
     }
 
     .prose-lg table {
@@ -51,5 +51,9 @@
 
     .prose-lg li {
         @apply list-disc;
+    }
+
+    .prose-lg img {
+        @apply mx-auto;
     }
 }

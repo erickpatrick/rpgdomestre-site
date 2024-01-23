@@ -1,1 +1,1 @@
-<time datetime="{{ $date }}" class="block text-sm leading-6 text-gray-600">{{ $date->locale("pt_BR")->toFormattedDateString() }}</time>
+<time datetime="{{ $date }}" class="inline-block text-sm leading-6 text-gray-600 text-center">{{ $date->locale("pt_BR")->toFormattedDateString() }}</time>

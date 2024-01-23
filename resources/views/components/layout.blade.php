@@ -1,14 +1,13 @@
 @props([
     'menu' => '/',
     'title' => null,
+    'header' => null,
     'description' => 'Onde o mestre cria, reinventa, modifica e publica RPG, principalmente Solo RPG.',
-    'keywords' => 'rpg, roleplaing game, rpg do mestre, rpgdm, jogos de interpretação de papeis, interpretação'
+    'keywords' => 'rpg, roleplaing game, rpg do mestre, rpgdm, jogos de interpretação de papeis, interpretação',
 ])
 
 @php
-$finalTitle = isset($title)
-    ? "{$title} | RPG do Mestre"
-    : "RPG do Mestre"
+    $finalTitle = isset($title) ? "{$title} | RPG do Mestre" : 'RPG do Mestre';
 @endphp
 
 <!DOCTYPE html>
@@ -47,15 +46,20 @@ $finalTitle = isset($title)
     @livewireStyles
 </head>
 
-<body class="">
-    <div class="container mx-auto p-4 py-8">
+<body class="bg-white">
+    <div class="bg-white">
+        <x-header>
+            {{ $header }}
+        </x-header>
 
+        {{ $slot }}
     </div>
 
-    {{ $slot }}
-
-
+    <x-footer />
     @livewireScripts
+    <script>
+        window.addEventListener('livewire:navigated', () => window.scrollTo({ top: 0 }));
+    </script>
 </body>
 
 </html>

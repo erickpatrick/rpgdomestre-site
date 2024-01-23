@@ -4,7 +4,7 @@
     $minutes = $seconds === 60 ? floor($length / 185) + 1 : floor($length / 185);
 @endphp
 
-<span class="block text-sm leading-6 text-gray-600">
+<span class="inline-block text-sm leading-6 text-gray-600 text-center">
     @if($minutes > 0){{ $minutes }}min @endif
     @if($seconds > 0 && $minutes > 0)e @endif
     @if($seconds > 0){{ $seconds }}s @endif de leitura</span>
