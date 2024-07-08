@@ -1,6 +1,6 @@
 <div>
     @if (session('status'))
-    <div class="p-4 bg-yellow-300/5" x-data="{ show: true }" x-show="show" x-init="setTimeout(() => show = false, 3000)">
+    <div class="p-4 bg-gray-300/5" x-data="{ show: true }" x-show="show" x-init="setTimeout(() => show = false, 3000)">
         {{ session('status') }}
     </div>
     @endif
@@ -12,7 +12,7 @@
 
         <div class="mt-6 flex items-center justify-end gap-x-6">
             <button type="button" class="text-sm font-semibold leading-6 text-gray-900">Cancelar</button>
-            <button type="submit" class="rounded-md bg-yellow-200 px-3 py-2 text-sm font-semibold text-black shadow-sm hover:bg-yellow-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600">
+            <button type="submit" class="rounded-md bg-gray-200 px-3 py-2 text-sm font-semibold text-black shadow-sm hover:bg-gray-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600">
                 Enviar
 
                 <div wire:loading>

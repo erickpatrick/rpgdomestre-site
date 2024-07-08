@@ -1,26 +1,28 @@
 @php
-    use App\Models\Page;
+use App\Models\Page;
 
-    $page = Page::whereNot('status', 'draft')
-        ->whereSlug('artigos-patrocinados')
-        ->get()->pop();
+$page = Page::whereNot('status', 'draft')
+->whereSlug('artigos-patrocinados')
+->get()->pop();
 
-        abort_unless($page, 404);
+abort_unless($page, 404);
 @endphp
 
 <x-layout
     menu="/artigos"
     title="{{ $page->title }}"
     description="{{ $page->description }}">
-    <div class="p-4 pt-12">
-        <div class="container mx-auto max-w-6xl">
-            <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold max-w-4xl mx-auto mb-2 text-center">{{ $page->title }}</h2>
-        </div>
+    <x-container>
+        <div class="p-4 pt-12">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold max-w-4xl mx-auto mb-2 text-center">{{ $page->title }}</h2>
+            </div>
 
-        <x-content-body>
-            <x-buk-markdown flavor="github">
-                {!! $page->content !!}
-            </x-buk-markdown>
-        </x-content-body>
-    </div>
+            <x-content-body>
+                <x-buk-markdown flavor="github">
+                    {!! $page->content !!}
+                </x-buk-markdown>
+            </x-content-body>
+        </div>
+    </x-container>
 </x-layout>

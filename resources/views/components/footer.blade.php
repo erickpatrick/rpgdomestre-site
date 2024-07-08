@@ -1,4 +1,4 @@
-<div class="p-4">
+<div class="p-4" id="footer">
     <footer class="bg-white" aria-labelledby="footer-heading">
         <h2 id="footer-heading" class="sr-only">Footer</h2>
         <div class="mx-auto max-w-6xl pb-8 pt-16 sm:pt-24 lg:pt-32">
@@ -7,7 +7,7 @@
                     <p class="text-2xl font-bold">RPG do Mestre</p>
                     <p class="text-sm leading-6 text-gray-600">Onde o mestre cria, reinventa, modifica, publica e discute RPG Solo.</p>
                     <div class="flex space-x-6">
-                        <a href="https://instagram.com/@rpgdm" target="_blank" class="text-gray-400 hover:text-gray-500">
+                        <a href="https://instagram.com/@rpgdm" target="_blank" class="text-gray-400 hover:text-black">
                             <span class="sr-only">Instagram</span>
                             <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path fill-rule="evenodd"
@@ -15,14 +15,14 @@
                                     clip-rule="evenodd" />
                             </svg>
                         </a>
-                        <a href="https://x.com/rpgdm" target="_blank" class="text-gray-400 hover:text-gray-500">
+                        <a href="https://x.com/rpgdm" target="_blank" class="text-gray-400 hover:text-black">
                             <span class="sr-only">Twitter</span>
                             <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path
                                     d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
                             </svg>
                         </a>
-                        <a href="https://youtube.com/@rpgdomestre" target="_blank" class="text-gray-400 hover:text-gray-500">
+                        <a href="https://youtube.com/@rpgdomestre" target="_blank" class="text-gray-400 hover:text-black">
                             <span class="sr-only">YouTube</span>
                             <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path fill-rule="evenodd"
@@ -39,19 +39,19 @@
                             <ul role="list" class="mt-6 space-y-4">
                                 <li>
                                     <a href="/artigos"
-                                        class="text-sm leading-6 text-gray-600 hover:text-gray-900" wire:navigate>Todos os artigos</a>
+                                        class="text-sm leading-6 hover:underline underline-offset-4 hover:decoration-1 hover:decoration-wavy" wire:navigate>Todos os artigos</a>
                                 </li>
                                 <li>
                                     <a href="/artigos/series"
-                                        class="text-sm leading-6 text-gray-600 hover:text-gray-900" wire:navigate>Todas as séries</a>
+                                        class="text-sm leading-6 hover:underline underline-offset-4 hover:decoration-1 hover:decoration-wavy" wire:navigate>Todas as séries</a>
                                 </li>
                                 <li>
                                     <a href="/artigos/envie-uma-correcao"
-                                        class="text-sm leading-6 text-gray-600 hover:text-gray-900" wire:navigate>Envie uma correção</a>
+                                        class="text-sm leading-6 hover:underline underline-offset-4 hover:decoration-1 hover:decoration-wavy" wire:navigate>Envie uma correção</a>
                                 </li>
                                 <li>
                                     <a href="/artigos/artigos-patrocinados"
-                                        class="text-sm leading-6 text-gray-600 hover:text-gray-900" wire:navigate>Artigos patrocinados</a>
+                                        class="text-sm leading-6 hover:underline underline-offset-4 hover:decoration-1 hover:decoration-wavy" wire:navigate>Artigos patrocinados</a>
                                 </li>
                             </ul>
                         </div>
@@ -60,20 +60,20 @@
                             <ul role="list" class="mt-6 space-y-4">
                                 <li>
                                     <a href="/alter-ego"
-                                        class="text-sm leading-6 text-gray-600 hover:text-gray-900" wire:navigate>Todas as criações</a>
+                                        class="text-sm leading-6 hover:underline underline-offset-4 hover:decoration-1 hover:decoration-wavy" wire:navigate>Todas as criações</a>
                                 </li>
                                 <li>
                                     <a href="/alter-ego/campanhas"
-                                        class="text-sm leading-6 text-gray-600 hover:text-gray-900" wire:navigate>Campanhas</a>
+                                        class="text-sm leading-6 hover:underline underline-offset-4 hover:decoration-1 hover:decoration-wavy" wire:navigate>Campanhas</a>
                                 </li>
                                 <li>
-                                    <a href="/alter-ego/aventuras" class="text-sm leading-6 text-gray-600 hover:text-gray-900" wire:navigate>Aventuras</a>
+                                    <a href="/alter-ego/aventuras" class="text-sm leading-6 hover:underline underline-offset-4 hover:decoration-1 hover:decoration-wavy" wire:navigate>Aventuras</a>
                                 </li>
                                 <li>
-                                    <a href="/alter-ego/tabelas" class="text-sm leading-6 text-gray-600 hover:text-gray-900" wire:navigate>Tabelas</a>
+                                    <a href="/alter-ego/tabelas" class="text-sm leading-6 hover:underline underline-offset-4 hover:decoration-1 hover:decoration-wavy" wire:navigate>Tabelas</a>
                                 </li>
                                 <li>
-                                    <a href="/alter-ego/envie-uma-correcao" class="text-sm leading-6 text-gray-600 hover:text-gray-900" wire:navigate>Envie uma correção</a>
+                                    <a href="/alter-ego/envie-uma-correcao" class="text-sm leading-6 hover:underline underline-offset-4 hover:decoration-1 hover:decoration-wavy" wire:navigate>Envie uma correção</a>
                                 </li>
                             </ul>
                         </div>
@@ -83,10 +83,10 @@
                             <h3 class="text-sm font-semibold leading-6 text-gray-900">RPG do Mestre</h3>
                             <ul role="list" class="mt-6 space-y-4">
                                 <li>
-                                    <a href="/sobre" class="text-sm leading-6 text-gray-600 hover:text-gray-900" wire:navigate>Sobre</a>
+                                    <a href="/sobre" class="text-sm leading-6 hover:underline underline-offset-4 hover:decoration-1 hover:decoration-wavy" wire:navigate>Sobre</a>
                                 </li>
                                 <li>
-                                    <a href="/contato" class="text-sm leading-6 text-gray-600 hover:text-gray-900" wire:navigate>Contato</a>
+                                    <a href="/contato" class="text-sm leading-6 hover:underline underline-offset-4 hover:decoration-1 hover:decoration-wavy" wire:navigate>Contato</a>
                                 </li>
                             </ul>
                         </div>
@@ -95,15 +95,15 @@
                             <ul role="list" class="mt-6 space-y-4">
                                 <li>
                                     <a href="/transparencia/reclamacoes"
-                                        class="text-sm leading-6 text-gray-600 hover:text-gray-900" wire:navigate>Reclamações</a>
+                                        class="text-sm leading-6 hover:underline underline-offset-4 hover:decoration-1 hover:decoration-wavy" wire:navigate>Reclamações</a>
                                 </li>
                                 <li>
                                     <a href="/transparencia/politica-de-privacidade"
-                                        class="text-sm leading-6 text-gray-600 hover:text-gray-900" wire:navigate>Política de Privacidade</a>
+                                        class="text-sm leading-6 hover:underline underline-offset-4 hover:decoration-1 hover:decoration-wavy" wire:navigate>Política de Privacidade</a>
                                 </li>
                                 <li>
                                     <a href="/transparencia/termos-e-condicoes"
-                                        class="text-sm leading-6 text-gray-600 hover:text-gray-900" wire:navigate>Termos e Condições</a>
+                                        class="text-sm leading-6 hover:underline underline-offset-4 hover:decoration-1 hover:decoration-wavy" wire:navigate>Termos e Condições</a>
                                 </li>
                             </ul>
                         </div>

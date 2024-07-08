@@ -1,10 +1,12 @@
 @props(['title' => '', 'href' => '', 'type' => ''])
 
-<div class="grid gap-4 text-slate-900">
-    <h4 class="text-3xl font-semibold">
-        <a href="/alter-ego/{{ $type }}/{{ $href }}" class="inline-block font-semibold hover:underline underline-offset-4 decoration-4 decoration-yellow-300" wire:navigate>
-            {{ $title }}
-        </a>
-    </h4>
-    <p class="text-lg text-slate-600">{{ $slot }}</p>
-</div>
+<article class="flex flex-col items-start justify-between">
+    <div class="group relative">
+        <h3 class="text-lg font-semibold leading-6 text-balance">
+            <a href="/alter-ego/{{ $type }}/{{ $href }}" class="underline underline-offset-4 hover:decoration-1 hover:decoration-wavy text-balance" wire:navigate>
+                {{ $title }}
+            </a>
+        </h3>
+        <p class="mt-5 line-clamp-3 text-sm leading-6 text-balance">{{ $slot }}</p>
+    </div>
+</article>

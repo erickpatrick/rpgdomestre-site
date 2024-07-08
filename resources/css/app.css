@@ -4,11 +4,12 @@
 
 @layer base {
     .fi-fo-field-wrp-label span {
-        @apply mt-2 text-sm font-medium leading-6 text-gray-900 dark:text-gray-900 !important;
+        @apply mt-2 text-sm font-medium leading-6 !important;
     }
+
     .fi-input-wrp,
     .fi-fo-textarea {
-        @apply dark:ring-gray-300 dark:focus-within:ring-yellow-600 !important;
+        @apply dark:ring-gray-300 dark:focus-within:ring-gray-600 !important;
     }
 
     .fi-input,
@@ -21,7 +22,7 @@
     }
 
     .prose-lg a {
-        @apply underline underline-offset-4 hover:decoration-yellow-400 hover:decoration-4 hover:underline;
+        @apply underline underline-offset-4 hover:decoration-1 hover:decoration-wavy;
     }
 
     .prose-lg table {
@@ -29,7 +30,7 @@
     }
 
     .prose-lg th {
-        @apply py-3.5 pl-4 pr-3 text-left font-semibold text-gray-900 sm:pl-0;
+        @apply py-3.5 pl-4 pr-3 text-left font-semibold sm:pl-0;
     }
 
     .prose-lg tbody {
@@ -37,7 +38,7 @@
     }
 
     .prose-lg td {
-        @apply py-4 pl-4 pr-3 text-gray-900 sm:pl-0;
+        @apply py-4 pl-4 pr-3 sm:pl-0;
     }
 
     .prose-lg h3,

@@ -19,15 +19,15 @@
                     <div class="flex flex-col gap-4">
                         <div class="-mb-4"><x-content-time :date="$article->created_at" /></div>
                         <h3 class="block text-lg sm:text-xl md:text-xl lg:text-3xl font-bold">
-                            <a class="hover:underline underline-offset-4 decoration-4 decoration-yellow-300"
+                            <a class="hover:underline underline-offset-4 decoration-4 decoration-gray-300"
                                 href="/artigos/{{ $article->slug }}" wire:navigate>{{ $article->title }}</a>
-                        </h3>
-                        <p class="text-gray-600 md:text-lg lg:text-xl">
-                            {{ $article->description }}
-                        </p>
-                    </div>
-                @endforeach --}}
+                </h3>
+                <p class="text-gray-600 md:text-lg lg:text-xl">
+                    {{ $article->description }}
+                </p>
             </div>
+            @endforeach --}}
+        </div>
         </div>
     </x-container>
 </x-layout>
